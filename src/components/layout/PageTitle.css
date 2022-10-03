@@ -16,7 +16,7 @@
     font-weight: 300;
 }
 
-.PageTitle.error{
+.PageTitle.error {
     border-left: 12px solid#cb2d3e;
-    background:#cb2d3e25;
+    background: #cb2d3e25;
 }
