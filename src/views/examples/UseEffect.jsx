@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import PageTitle from '../../components/layout/PageTitle'
+import SectionTitle from '../../components/layout/SectionTitle'
 
 function calcFactorial(num) {
     const n = parseInt(num)
@@ -9,20 +10,28 @@ function calcFactorial(num) {
 }
 
 const UseEffect = (props) => {
+    // Ex #01
     const [number, setNumber] = useState(1)
     const [factorial, setFactorial] = useState(1)
-
+    
     useEffect(() => {
         setFactorial(calcFactorial(number))
     }, [number])
-
+    
     useEffect(() => {
-        if(factorial > 1000000) {
+        if (factorial > 1000000) {
             document.title = "Eita!!!"
         } else {
             document.title = "React App"
         }
     }, [factorial])
+    
+    // Ex #02
+    const [status, setStatus] = useState(1)
+
+    useEffect(() => {
+        setStatus(number % 2 === 0 ? "Par" : "Ímpar")
+    }, [number])
 
     return (
         <div className="UseEffect">
@@ -44,7 +53,10 @@ const UseEffect = (props) => {
 
             <SectionTitle title="Exercício #02" ></SectionTitle>
             <div className="center">
-                
+                <div>
+                    <span className="text">Status: </span>
+                    <span className="text red">{status}</span>
+                </div>
             </div>
         </div>
     )
