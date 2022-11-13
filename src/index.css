@@ -5,7 +5,8 @@ body {
 
 .text {
     font-weight: 300;
-    font-size: 5rem;
+    font-size: 4.8rem;
+    color: #fff
 }
 
 .red {
@@ -22,12 +23,13 @@ body {
 .btn {
     border-radius: 25px;
     margin: 10px;
-    padding: 15px 35px;
+    padding: 15px 20px;
+
     border: none;
     outline: none;
+    
+    font-size: 2.5rem;
     background-color: #0092c3;
-
-    font-size: 3rem;
     color: #fff;
 }
 
